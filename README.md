@@ -5,7 +5,7 @@ Bu repo [Kodluyoruz](https://www.kodluyoruz.org/) Java 101 eğitimi için hazır
 |  PRATİKLER  |  ÖDEVLER |
 |-----------|---------|
 | [PRATİK 1](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-1---not-ortalamas%C4%B1) - Not Ortalaması| [ÖDEV 1](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#%C3%B6dev-1---v%C3%BCcut-kitle-indeksi-hesaplama) - Vücut Kitle Indeksi Hesaplama|
-| [PRATİK 2](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-2---kdv-tutar%C4%B1) - Kdv Tutarı | [ÖDEV 2]() |
+| [PRATİK 2](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-2---kdv-tutar%C4%B1) - Kdv Tutarı | [ÖDEV 2]() - Manav Kasa Programı |
 | [PRATİK 3](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-3---alan-hesaplama) - Alan Hesaplama |
 |[PRATİK 4](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-4---taksimetre-hesaplama) - Taksimetre Hesaplama |
 |[PRATİK 5](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#prati%CC%87k-5---alan-hesaplama) - Alan Hesaplama |
@@ -174,6 +174,40 @@ public class VucutKitleIndeksi {
 
         kitleIndeks=kilo/(boy*boy);
         System.out.println("Vücut Kitle Indeksiniz: "+kitleIndeks);
+    }
+}
+```
+### ÖDEV 2 -Manav Kasa Programı
+Java ile kullanıcıların manavdan almış oldukları ürünlerin kilogram değerlerine göre toplam tutarını ekrana yazdıran programı yazın. 
+Meyveler ve KG Fiyatları: 
+Armut : 2,14 TL,
+Elma : 3,67 TL,
+Domates : 1,11 TL,
+Muz: 0,95 TL,
+Patlıcan : 5,00 TL
+```
+import java.util.Scanner;
+public class ManavKasa {
+    public static void main(String[] args) {
+        double armutKg=2.14, elmaKg=3.67, domatesKg=1.11, muzKg=0.95, patlicanKg=5;
+        double armut, elma, domates, muz, patlican, toplamTutar;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Armut Kaç Kilo ? :");
+        armut = input.nextFloat();
+
+        System.out.print("Elma Kaç Kilo ? :");
+        elma = input.nextFloat();
+
+        System.out.print("Domates Kaç Kilo ? :");
+        domates = input.nextFloat();
+
+        System.out.print("Muz Kaç Kilo ? :");
+        muz = input.nextFloat();
+
+        System.out.print("Patlıcan Kaç Kilo ? :");
+        patlican = input.nextFloat();
+        toplamTutar=(armut*armutKg)+(elma*elmaKg)+(domates*domatesKg)+(muz*muzKg)+(patlican*patlicanKg);
+        System.out.print("Toplam Tutar :" + toplamTutar + " TL");
     }
 }
 ```
