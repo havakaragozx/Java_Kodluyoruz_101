@@ -7,6 +7,7 @@ Bu repo [Kodluyoruz](https://www.kodluyoruz.org/) Java 101 eğitimi için hazır
 | [PRATİK 1](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-1---not-ortalamas%C4%B1) - Not Ortalaması| [ÖDEV 1]() |
 | [PRATİK 2](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-2---kdv-tutar%C4%B1) - Kdv Tutarı | [ÖDEV 2]() |
 | [PRATİK 3](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-3---alan-hesaplama) - Alan Hesaplama |
+|[PRATİK 4]() - Taksimetre Hesaplama |
 -------------------------------------------
 ### Pratik 1 - Not Ortalaması
 Java ile Matematik, Fizik, Kimya, Türkçe, Tarih, Müzik derslerinin sınav puanlarını kullanıcıdan alan ve ortalamalarını hesaplayıp ekrana bastırılan programı yazın.
@@ -107,4 +108,27 @@ public class Hipotenus {
 
 }
 ```
+### Pratik 4 - Taksimetre Hesaplama
+Java ile gidilen mesafeye (KM) göre taksimetre tutarını ekrana yazdıran programı yazın.
+-Taksimetre KM başına 2.20 TL tutmaktadır.
+-Minimum ödenecek tutar 20 TL'dir. 20 TL altında ki ücretlerde yine 20 TL alınacaktır.
+-Taksimetre açılış ücreti 10 TL'dir.
+```
+package Pratik1;
+import java.util.Scanner;
+public class Taksimetre {
+    public static void main(String[] args) {
+        int km;
+        double perKm=2.20,total=10;
 
+        Scanner input=new Scanner(System.in);
+        System.out.print("Mesafeyi km cinsinden giriniz: ");
+        km=input.nextInt();
+        total+=(km*perKm);
+        total=(total<20) ? 20 : total;
+        System.out.println("Toplam Tutar: "+total);
+
+    }
+}
+
+```
