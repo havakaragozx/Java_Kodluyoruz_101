@@ -6,6 +6,7 @@ Bu repo [Kodluyoruz](https://www.kodluyoruz.org/) Java 101 eğitimi için hazır
 |-----------|---------|
 | [PRATİK 1](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-1---not-ortalamas%C4%B1) - Not Ortalaması| [ÖDEV 1]() |
 | [PRATİK 2](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-2---kdv-tutar%C4%B1) - Kdv Tutarı | [ÖDEV 2]() |
+| [PRATİK 3]() - Alan Hesaplama |
 -------------------------------------------
 ### Pratik 1 - Not Ortalaması
 Java ile Matematik, Fizik, Kimya, Türkçe, Tarih, Müzik derslerinin sınav puanlarını kullanıcıdan alan ve ortalamalarını hesaplayıp ekrana bastırılan programı yazın.
@@ -76,3 +77,34 @@ public class KdvHesaplama {
     }
 }
 ```
+### Pratik 3 - Alan Hesaplama
+Üç kenar uzunluğunu kullanıcıdan aldığınız üçgenin alanını hesaplayan programı yazınız.
+```
+package Pratik1;
+import java.util.Scanner;
+public class Hipotenus {
+    public static void main(String[] args) {
+        double a,b,c;
+        double alan,u;
+
+        Scanner input=new Scanner(System.in);
+        System.out.print("1.Kenarı giriniz:");
+        a=input.nextInt();
+        System.out.print("2.Kenarı giriniz:");
+        b=input.nextInt();
+
+        System.out.print("3.Kenarı giriniz:");
+        c=input.nextInt();
+
+        u=(a+b+c)/2;
+        alan=Math.sqrt(u*(u-a)*(u-b)*(u-c));
+        System.out.println("Üçgenin Alanı : "+alan);
+
+
+
+        System.out.println();
+    }
+
+}
+```
+
