@@ -158,3 +158,22 @@ public class DaireAlanCevre {
     }
 }
 ```
+
+### ÖDEV 1 - VUCUT KİTLE İNDEKSİ HESAPLAMA
+Java ile kullanıcıdan boy ve kilo değerlerini alıp bir değişkene atayın. Aşağıda ki formüle göre kullanıcının "Vücut Kitle İndeks" değerini hesaplayıp ekrana yazdırın.
+```
+import java.util.Scanner;
+public class VucutKitleIndeksi {
+    public static void main(String[] args) {
+        double boy,kilo,kitleIndeks;
+        Scanner input=new Scanner(System.in);
+        System.out.println("Boyunuzu giriniz: ");
+        boy=input.nextDouble();
+        System.out.println("Kilonuzu giriniz: ");
+        kilo=input.nextDouble();
+
+        kitleIndeks=kilo/(boy*boy);
+        System.out.println("Vücut Kitle Indeksiniz: "+kitleIndeks);
+    }
+}
+```
