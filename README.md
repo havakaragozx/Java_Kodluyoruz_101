@@ -4,7 +4,7 @@ Bu repo [Kodluyoruz](https://www.kodluyoruz.org/) Java 101 eğitimi için hazır
 
 |  PRATİKLER  |  ÖDEVLER |
 |-----------|---------|
-| [PRATİK 1]() - Not Ortalaması| [ÖDEV 1]() |
+| [PRATİK 1](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-1---not-ortalamas%C4%B1) - Not Ortalaması| [ÖDEV 1]() |
 
 -------------------------------------------
 ### Pratik 1 - Not Ortalaması
