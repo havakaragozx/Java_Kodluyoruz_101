@@ -8,6 +8,7 @@ Bu repo [Kodluyoruz](https://www.kodluyoruz.org/) Java 101 eğitimi için hazır
 | [PRATİK 2](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-2---kdv-tutar%C4%B1) - Kdv Tutarı | [ÖDEV 2]() |
 | [PRATİK 3](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-3---alan-hesaplama) - Alan Hesaplama |
 |[PRATİK 4](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-4---taksimetre-hesaplama) - Taksimetre Hesaplama |
+|[PRATİK 5]() - Alan Hesaplama |
 -------------------------------------------
 ### Pratik 1 - Not Ortalaması
 Java ile Matematik, Fizik, Kimya, Türkçe, Tarih, Müzik derslerinin sınav puanlarını kullanıcıdan alan ve ortalamalarını hesaplayıp ekrana bastırılan programı yazın.
@@ -131,4 +132,29 @@ public class Taksimetre {
     }
 }
 
+```
+### PRATİK 5 - Alan Hesaplama
+Yarıçapı r, merkez açısısının ölçüsü 𝛼 olan daire diliminin alanı bulan programı yazınız.
+-𝜋 sayısını = 3.14 alınız.
+-Formül : (𝜋 * (r*r) * 𝛼) / 360
+
+```
+import java.util.Scanner;
+public class DaireAlanCevre {
+    public static void main(String[] args) {
+        int r;
+        double pi=3.14;
+
+        Scanner input=new Scanner(System.in);
+        System.out.print("Dairenin Yarıçapını girin:");
+        r=input.nextInt();
+        double alan=pi*r*r;
+        System.out.println("Dairenin Alanı : "+alan);
+        double merkezAcı,daireDilimAlan;
+        System.out.println("Dairenin merkez açısını giriniz: ");
+        merkezAcı=input.nextDouble();
+        daireDilimAlan=(pi*(r*r)*merkezAcı)/360;
+        System.out.println("Dairenin diliminin Alanı : "+daireDilimAlan);
+    }
+}
 ```
