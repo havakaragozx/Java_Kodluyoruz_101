@@ -5,7 +5,7 @@ Bu repo [Kodluyoruz](https://www.kodluyoruz.org/) Java 101 eğitimi için hazır
 |  PRATİKLER  |  ÖDEVLER |
 |-----------|---------|
 | [PRATİK 1](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-1---not-ortalamas%C4%B1) - Not Ortalaması| [ÖDEV 1]() |
-
+| [PRATİK 2]() - Kdv Tutarı | 
 -------------------------------------------
 ### Pratik 1 - Not Ortalaması
 Java ile Matematik, Fizik, Kimya, Türkçe, Tarih, Müzik derslerinin sınav puanlarını kullanıcıdan alan ve ortalamalarını hesaplayıp ekrana bastırılan programı yazın.
@@ -41,6 +41,38 @@ public class NotOrtalamasi {
 
          boolean kosul1=ortalama>=60;
         System.out.print("Durum="+(kosul1==true ? "Geçti" : "Kaldı"));
+    }
+}
+```
+### Pratik 2 -Kdv Tutarı
+Java ile kullanıcıdan alınan para değerinin KDV'li fiyatını ve KDV tutarını hesaplayıp ekrana bastıran programı yazın.
+
+```
+package Pratik1;
+import java.util.Scanner;
+public class KdvHesaplama {
+    public static void main(String[] args) {
+        double tutar,kdvOran=0,kdvTutar,kdvliTutar;
+        Scanner input=new Scanner(System.in);
+        System.out.print("Ücret Tutarını Giriniz:");
+        tutar=input.nextDouble();
+        if (tutar>0 && tutar<1000){
+            kdvOran=0.18;
+
+        }
+        else if(tutar>1000){
+            kdvOran=0.08;
+        }
+        else{
+            System.out.println("Geçerli Tutar Giriniz.");
+        }
+        kdvTutar=tutar*kdvOran;
+        kdvliTutar=tutar+kdvTutar;
+        System.out.println("Kdv'siz Tutar : "+tutar);
+        System.out.println("Kdv Oranı: "+kdvOran);
+        System.out.println("Kdv Tutarı: "+kdvTutar);
+        System.out.println("Kdv'li Tutar: "+kdvliTutar);
+
     }
 }
 ```
