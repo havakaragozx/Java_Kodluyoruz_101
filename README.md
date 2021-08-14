@@ -5,7 +5,7 @@ Bu repo [Kodluyoruz](https://www.kodluyoruz.org/) Java 101 eğitimi için hazır
 |  PRATİKLER  |  ÖDEVLER |
 |-----------|---------|
 | [PRATİK 1](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-1---not-ortalamas%C4%B1) - Not Ortalaması| [ÖDEV 1]() |
-| [PRATİK 2]() - Kdv Tutarı | 
+| [PRATİK 2](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-2--kdv-tutar%C4%B1) - Kdv Tutarı | 
 -------------------------------------------
 ### Pratik 1 - Not Ortalaması
 Java ile Matematik, Fizik, Kimya, Türkçe, Tarih, Müzik derslerinin sınav puanlarını kullanıcıdan alan ve ortalamalarını hesaplayıp ekrana bastırılan programı yazın.
@@ -44,7 +44,7 @@ public class NotOrtalamasi {
     }
 }
 ```
-### Pratik 2 -Kdv Tutarı
+### Pratik 2 - Kdv Tutarı
 Java ile kullanıcıdan alınan para değerinin KDV'li fiyatını ve KDV tutarını hesaplayıp ekrana bastıran programı yazın.
 
 ```
