@@ -8,7 +8,7 @@ Bu repo [Kodluyoruz](https://www.kodluyoruz.org/) Java 101 eğitimi için hazır
 | [PRATİK 2](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-2---kdv-tutar%C4%B1) - Kdv Tutarı | [ÖDEV 2](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#%C3%B6dev-2--manav-kasa-program%C4%B1) - Manav Kasa Programı |
 | [PRATİK 3](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-3---alan-hesaplama) - Alan Hesaplama | [ÖDEV 3](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#%C3%B6dev-3---u%C3%A7ak-bileti-fiyat%C4%B1-hesaplayan-program) - Uçak Bileti Fiyatı Hesaplayan Program |
 |[PRATİK 4](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-4---taksimetre-hesaplama) - Taksimetre Hesaplama | [ÖDEV 4](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#%C3%B6dev-4---%C3%A7in-zodya%C4%9F%C4%B1-hesaplama) - Çin Zodyağı Hesaplama |
-|[PRATİK 5](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#prati%CC%87k-5---alan-hesaplama) - Alan Hesaplama |
+|[PRATİK 5](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#prati%CC%87k-5---alan-hesaplama) - Alan Hesaplama | [ödev 5]() - Artık Yıl Hesaplama |
 |[PRATİK 6](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-6---hesap-makinesi) - Hesap Makinesi|
 |[PRATİK 7](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-7---kullan%C4%B1c%C4%B1-giri%C5%9Fi) - Kullanıcı Girişi|
 |[PRATİK 8](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-8---s%C4%B1n%C4%B1f%C4%B1-ge%C3%A7me-durumu) -  Sınıfı Geçme Durumu|
@@ -802,6 +802,58 @@ public class CinZodyagi {
             System.out.print("Çin Zodyağı Burcunuz : At");
         }else if (kalan==11){
             System.out.print("Çin Zodyağı Burcunuz : Koyun");
+        }
+    }
+}
+
+
+```
+
+### ÖDEV 5 -  Artık Yıl Hesaplama
+Artık Yıl Hesaplayan Program
+
+Java ile kullanıcının girdiği yılın artık olup olmadığını bulan programı yazınız.
+
+🔍 Artık Yıl Nedir?
+Artık yıl, Miladî takvimde 365 yerine 366 günü olan yıl. Bu fazladan gün (artık gün), normalde 28 gün olan şubat ayına 29 Şubat’ın eklenmesi ile elde edilir.
+
+📌 Artık Yıl Nasıl Hesaplanır?
+
+Genel bir kural olarak, artık yıllar 4 rakamının katı olan yıllardır:
+1988, 1992, 1996, 2000, 2004, 2008, 2012, 2016, 2020, 2024 gibi.
+
+100'ün katı olan yıllardan sadece 400'e kalansız olarak bölünebilenler artık yıldır:
+Örneğin 1200, 1600, 2000 yılları artık yıldır ancak 1700, 1800 ve 1900 artık yıl değildir.
+
+Sadece 400'e tam olarak bölünebilenlerin artık yıl kabul edilmesinin nedeni, bir astronomik yılın 365,25 gün değil, yaklaşık olarak 365,242 gün olmasından kaynaklanan hatayı gidermektir.
+
+```
+import java.util.Scanner;
+
+public class ArtikYil {
+    public static void main(String[] args) {
+        int yil, kalanYuz, kalanDort, kalanDortYuz;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Yıl Giriniz : ");
+        yil = input.nextInt();
+
+        kalanYuz = yil % 100;
+        kalanDort = yil % 4;
+
+        if (kalanDort == 0) {
+            if (kalanYuz == 0) {
+                kalanDortYuz = yil % 400;
+                if (kalanDortYuz == 0) {
+                    System.out.print(yil + " bir artık yıldır !");
+                } else {
+                    System.out.print(yil + " bir artık yıl değildir !");
+                }
+            } else {
+                System.out.print(yil + " bir artık yıldır !");
+            }
+        } else {
+            System.out.print(yil + " bir artık yıl değildir !");
         }
     }
 }
