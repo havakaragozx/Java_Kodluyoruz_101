@@ -9,6 +9,7 @@ Bu repo [Kodluyoruz](https://www.kodluyoruz.org/) Java 101 eğitimi için hazır
 | [PRATİK 3](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-3---alan-hesaplama) - Alan Hesaplama |
 |[PRATİK 4](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-4---taksimetre-hesaplama) - Taksimetre Hesaplama |
 |[PRATİK 5](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#prati%CC%87k-5---alan-hesaplama) - Alan Hesaplama |
+|[PRATİK 6]() - Hesap Makinesi|
 -------------------------------------------
 ### Pratik 1 - Not Ortalaması
 Java ile Matematik, Fizik, Kimya, Türkçe, Tarih, Müzik derslerinin sınav puanlarını kullanıcıdan alan ve ortalamalarını hesaplayıp ekrana bastırılan programı yazın.
@@ -210,4 +211,51 @@ public class ManavKasa {
         System.out.print("Toplam Tutar :" + toplamTutar + " TL");
     }
 }
+```
+### Pratik 7 - Hesap Makinesi 
+Java switch case ile basit hesap makinesi yapımı.
+```
+import java.util.Scanner;
+public class HesapMakinesi {
+     public static void main(String[] args) {
+          int n1,n2,select;
+
+          Scanner input=new Scanner(System.in);
+          System.out.print("İlk sayıyı girin: ");
+          n1=input.nextInt();
+          System.out.print("İkinci sayıyı girin:");
+          n2=input.nextInt();
+          System.out.println(n1 + n2);
+
+          System.out.println("1-Toplama\n2-Çıkarma\n3-Çarpma\n4-Bölme");
+          System.out.print("Seçiminiz:");
+          select=input.nextInt();
+    
+          switch (select){
+               case 1 :
+                    System.out.println("Toplam:"+(n1+n2));
+                    break;
+               case 2:
+                    System.out.println("Çıkarma: "+(n1-n2));
+                    break;
+               case 3:
+                    System.out.println("Çarpma: "+(n1*n2));
+                    break;
+               case 4:
+                    if(n2!=0){
+                         System.out.println("Bölme: "+(n1/n2));
+                    }
+                    else{
+                         System.out.println("Bir sayı 0 a bölünemez.");
+                    }
+                    break;
+               default:
+                    System.out.println("Yanlış seçim yaptınız.");
+                    break;
+          }
+     }
+
+}
+
+
 ```
