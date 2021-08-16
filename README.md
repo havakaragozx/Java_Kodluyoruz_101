@@ -11,6 +11,7 @@ Bu repo [Kodluyoruz](https://www.kodluyoruz.org/) Java 101 eğitimi için hazır
 |[PRATİK 5](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#prati%CC%87k-5---alan-hesaplama) - Alan Hesaplama |
 |[PRATİK 6](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-6---hesap-makinesi) - Hesap Makinesi|
 |[PRATİK 7](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-7---kullan%C4%B1c%C4%B1-giri%C5%9Fi) - Kullanıcı Girişi|
+|[PRATİK 8]() -  Sınıfı Geçme Durumu|
 -------------------------------------------
 ### Pratik 1 - Not Ortalaması
 Java ile Matematik, Fizik, Kimya, Türkçe, Tarih, Müzik derslerinin sınav puanlarını kullanıcıdan alan ve ortalamalarını hesaplayıp ekrana bastırılan programı yazın.
@@ -311,4 +312,71 @@ public class KullaniciGirisi {
     }
 }
 
+```
+### Pratik 8 - Sınıfı Geçme Durumu
+Java koşullu ifadeler ile kullanıcının not durumuna göre sınıfı geçme durumunu hesaplayan program yapımı.Eğer girilen ders notları 0 veya 100 arasında değil ise ortalamaya katılmasın
+```
+import java.util.Scanner;
+public class NotOrtalamasi {
+    public static void main(String[] args) {
+    int mat,fizik,kimya,turkce,muzik,dersSayisi=5;
+    Scanner input=new Scanner(System.in);
+        System.out.print("Matematik notunuzu giriniz = ");
+        mat = input.nextInt();
+
+        System.out.print("Fizik notunuzu giriniz = ");
+        fizik = input.nextInt();
+
+        System.out.print("Kimya notunuzu giriniz = ");
+        kimya = input.nextInt();
+
+        System.out.print("Türkçe notunuzu giriniz = ");
+        turkce = input.nextInt();
+
+
+        System.out.print("Müzik notunuzu giriniz = ");
+        muzik = input.nextInt();
+        if (mat < 0 || mat > 100) {
+            mat = 0;
+            dersSayisi--;
+        }
+
+        if (fizik < 0 || fizik > 100) {
+            fizik = 0;
+            dersSayisi--;
+        }
+
+        if (turkce < 0 || turkce > 100) {
+            turkce = 0;
+            dersSayisi--;
+        }
+
+        if (kimya < 0 || kimya > 100) {
+            kimya = 0;
+            dersSayisi--;
+        }
+
+        if (muzik < 0 || muzik > 100) {
+            muzik = 0;
+            dersSayisi--;
+        }
+         int toplam=mat+fizik+kimya+muzik+turkce;
+         double ortalama= toplam/dersSayisi;
+
+
+
+        if (ortalama<55 && ortalama>=0){
+            System.out.println("Kaldınız.");
+
+        }
+        else if(ortalama >= 55 && ortalama <= 100){
+            System.out.println("Geçtiniz");
+
+        }
+        else{
+            System.out.println("Geçerli not giriniz.");
+        }
+        System.out.println("Ortalama :"+ortalama);
+    }
+}
 ```
