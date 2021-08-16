@@ -7,7 +7,7 @@ Bu repo [Kodluyoruz](https://www.kodluyoruz.org/) Java 101 eğitimi için hazır
 | [PRATİK 1](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-1---not-ortalamas%C4%B1) - Not Ortalaması| [ÖDEV 1](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#%C3%B6dev-1---v%C3%BCcut-kitle-indeksi-hesaplama) - Vücut Kitle Indeksi Hesaplama|
 | [PRATİK 2](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-2---kdv-tutar%C4%B1) - Kdv Tutarı | [ÖDEV 2](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#%C3%B6dev-2--manav-kasa-program%C4%B1) - Manav Kasa Programı |
 | [PRATİK 3](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-3---alan-hesaplama) - Alan Hesaplama | [ÖDEV 3](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#%C3%B6dev-3---u%C3%A7ak-bileti-fiyat%C4%B1-hesaplayan-program) - Uçak Bileti Fiyatı Hesaplayan Program |
-|[PRATİK 4](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-4---taksimetre-hesaplama) - Taksimetre Hesaplama |
+|[PRATİK 4](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-4---taksimetre-hesaplama) - Taksimetre Hesaplama | [ÖDEV 4]() - Çin Zodyağı Hesaplama |
 |[PRATİK 5](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#prati%CC%87k-5---alan-hesaplama) - Alan Hesaplama |
 |[PRATİK 6](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-6---hesap-makinesi) - Hesap Makinesi|
 |[PRATİK 7](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-7---kullan%C4%B1c%C4%B1-giri%C5%9Fi) - Kullanıcı Girişi|
@@ -736,6 +736,72 @@ public class UcakBiletiFiyati {
             default:
                 System.out.println("\nHatalı Veri Girdiniz !");
                 break;
+        }
+    }
+}
+
+
+```
+### ÖDEV 4 - Çin Zodyağı Hesaplama
+Çin Zodyağı Hesaplayan Program
+
+Java ile kullanıcıdan doğum tarihini alıp Çin Zodyağı değerini hesaplayan program yazınız.
+
+🔍 Çin Zodyağı nedir?
+4000 bin yıldır kullanılan bir astroloji çeşididir Çin astrolojisi ve insanları 12 değişik burç ve sembollerle tanımlar. Çin Zodyağı bu 12 burcun eşit aralıklarla(10 derece genişliğinde) sıralandığı bir hayvan halkasıdır ve yıldızlarla pek bir ilgisi yoktur.
+
+📌 Çin Zodyağı nasıl hesaplanır? Çin zodyağı hesaplanırken kişinin doğum yılının 12 ile bölümünde kalana göre bulunur.
+
+Doğum Tarihi %12 = 0 ➜ Maymun,
+Doğum Tarihi %12 = 1 ➜ Horoz,
+Doğum Tarihi %12 = 2 ➜ Köpek,
+Doğum Tarihi %12 = 3 ➜ Domuz,
+Doğum Tarihi %12 = 4 ➜ Fare,
+Doğum Tarihi %12 = 5 ➜ Öküz,
+Doğum Tarihi %12 = 6 ➜ Kaplan,
+Doğum Tarihi %12 = 7 ➜ Tavşan,
+Doğum Tarihi %12 = 8 ➜ Ejderha,
+Doğum Tarihi %12 = 9 ➜ Yılan,
+Doğum Tarihi %12 = 10 ➜ At,
+Doğum Tarihi %12 = 11 ➜ Koyun.
+
+```
+import java.util.Scanner;
+
+public class CinZodyagi {
+    public static void main(String[] args) {
+        int dYil, kalan;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Doğum Yılınızı Giriniz : ");
+        dYil = input.nextInt();
+
+        kalan = dYil%12;
+
+        if (kalan==0){
+            System.out.print("Çin Zodyağı Burcunuz : Maymun");
+        } else if (kalan==1){
+            System.out.print("Çin Zodyağı Burcunuz : Horoz");
+        }else if (kalan==2){
+            System.out.print("Çin Zodyağı Burcunuz : Köpek");
+        }else if (kalan==3){
+            System.out.print("Çin Zodyağı Burcunuz : Domuz");
+        }else if (kalan==4){
+            System.out.print("Çin Zodyağı Burcunuz : Fare");
+        }else if (kalan==5){
+            System.out.print("Çin Zodyağı Burcunuz : Öküz");
+        }else if (kalan==6){
+            System.out.print("Çin Zodyağı Burcunuz : Kaplan");
+        }else if (kalan==7){
+            System.out.print("Çin Zodyağı Burcunuz : Tavşan");
+        }else if (kalan==8){
+            System.out.print("Çin Zodyağı Burcunuz : Ejderha");
+        }else if (kalan==9){
+            System.out.print("Çin Zodyağı Burcunuz : Yılan");
+        }else if (kalan==10){
+            System.out.print("Çin Zodyağı Burcunuz : At");
+        }else if (kalan==11){
+            System.out.print("Çin Zodyağı Burcunuz : Koyun");
         }
     }
 }
