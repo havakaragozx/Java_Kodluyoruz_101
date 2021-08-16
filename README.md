@@ -10,6 +10,7 @@ Bu repo [Kodluyoruz](https://www.kodluyoruz.org/) Java 101 eğitimi için hazır
 |[PRATİK 4](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-4---taksimetre-hesaplama) - Taksimetre Hesaplama |
 |[PRATİK 5](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#prati%CC%87k-5---alan-hesaplama) - Alan Hesaplama |
 |[PRATİK 6](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-6---hesap-makinesi) - Hesap Makinesi|
+|[PRATİK 7]() - Kullanıcı Girişi|
 -------------------------------------------
 ### Pratik 1 - Not Ortalaması
 Java ile Matematik, Fizik, Kimya, Türkçe, Tarih, Müzik derslerinin sınav puanlarını kullanıcıdan alan ve ortalamalarını hesaplayıp ekrana bastırılan programı yazın.
@@ -257,5 +258,57 @@ public class HesapMakinesi {
 
 }
 
+
+```
+
+### Pratik 7 - Kullanıcı Girişi
+Java koşullu ifadeler ile kullanıcı adı ve şifreyi kontrol eden program yapımı.
+
+```
+import java.util.Scanner;
+
+public class KullaniciGirisi {
+    public static void main(String[] args) {
+
+        String userName, passWord;
+        char sifreCevap;
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Lütfen kullanıcı adınızı giriniz: ");
+        userName = input.nextLine();
+
+        System.out.print("Lütfen şifrenizi giriniz: ");
+        passWord = input.nextLine();
+
+        if (userName.equals("patika")) {
+            if (passWord.equals("dev")) {
+                System.out.println("Sisteme başarılı bir şekilde giriş yaptınız.");
+            } else {
+                System.out.println("Hatalı şifre girişi !!!");
+                System.out.print("Şifrenizi sıfırlamak ister misiniz? E/H : ");
+                sifreCevap = input.next().charAt(0);
+
+                if (sifreCevap == 'E') {
+
+                    System.out.print("Lütfen yeni şifrenizi giriniz: ");
+                    String newPassword = input.next();
+
+                    if (newPassword.equals(passWord) || newPassword.equals("dev")) {
+                        System.out.print("Şifre oluşturulamadı");
+                    } else {
+                        System.out.print("Şifre oluşturuldu.");
+                    }
+                } else if (sifreCevap == 'H') {
+                    System.out.print("Şifre oluşturma işlemi iptal edildi..");
+
+                } else {
+                    System.out.print("Lütfen geçerli bir parametre giriniz. E (Evet) veya H (Hayır) !!!");
+                }
+            }
+        } else {
+            System.out.println("Hatalı kullanıcı adı girişi !!!");
+        }
+    }
+}
 
 ```
