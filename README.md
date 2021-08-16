@@ -134,7 +134,7 @@ public class Taksimetre {
 }
 
 ```
-### PRATİK 5 - Alan Hesaplama
+### Pratik 5 - Alan Hesaplama
 Yarıçapı r, merkez açısısının ölçüsü 𝛼 olan daire diliminin alanı bulan programı yazınız.
 -𝜋 sayısını = 3.14 alınız.
 -Formül : (𝜋 * (r*r) * 𝛼) / 360
@@ -212,7 +212,7 @@ public class ManavKasa {
     }
 }
 ```
-### Pratik 7 - Hesap Makinesi 
+### Pratik 6 - Hesap Makinesi 
 Java switch case ile basit hesap makinesi yapımı.
 ```
 import java.util.Scanner;
