@@ -6,7 +6,7 @@ Bu repo [Kodluyoruz](https://www.kodluyoruz.org/) Java 101 eğitimi için hazır
 |-----------|---------|
 | [PRATİK 1](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-1---not-ortalamas%C4%B1) - Not Ortalaması| [ÖDEV 1](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#%C3%B6dev-1---v%C3%BCcut-kitle-indeksi-hesaplama) - Vücut Kitle Indeksi Hesaplama|
 | [PRATİK 2](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-2---kdv-tutar%C4%B1) - Kdv Tutarı | [ÖDEV 2](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#%C3%B6dev-2--manav-kasa-program%C4%B1) - Manav Kasa Programı |
-| [PRATİK 3](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-3---alan-hesaplama) - Alan Hesaplama |
+| [PRATİK 3](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-3---alan-hesaplama) - Alan Hesaplama | [ÖDEV 3]() - Uçak Bileti Fiyatı Hesaplayan Program |
 |[PRATİK 4](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-4---taksimetre-hesaplama) - Taksimetre Hesaplama |
 |[PRATİK 5](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#prati%CC%87k-5---alan-hesaplama) - Alan Hesaplama |
 |[PRATİK 6](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-6---hesap-makinesi) - Hesap Makinesi|
@@ -14,7 +14,7 @@ Bu repo [Kodluyoruz](https://www.kodluyoruz.org/) Java 101 eğitimi için hazır
 |[PRATİK 8](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-8---s%C4%B1n%C4%B1f%C4%B1-ge%C3%A7me-durumu) -  Sınıfı Geçme Durumu|
 |[PRATİK 9](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-9---hava-s%C4%B1cakl%C4%B1g%C4%B1na-g%C3%B6re-etkinlik) - Hava Sıcaklıgına Göre Etkinlik|
 |[PRATİK 10](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-10---k%C3%BC%C3%A7%C3%BCkten-b%C3%BCy%C3%BC%C4%9Fe-s%C4%B1ralama) - Küçükten Büyüğe Sıralama|
-|PRATİK 11(https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-11---bur%C3%A7-bulan-program) - Burç Bulan Program|
+|[PRATİK 11](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-11---bur%C3%A7-bulan-program) - Burç Bulan Program|
 -------------------------------------------
 ### Pratik 1 - Not Ortalaması
 Java ile Matematik, Fizik, Kimya, Türkçe, Tarih, Müzik derslerinin sınav puanlarını kullanıcıdan alan ve ortalamalarını hesaplayıp ekrana bastırılan programı yazın.
@@ -660,5 +660,85 @@ public class BurcBulanProgram {
         }
     }
 }
+
+```
+### ÖDEV 3 - Uçak Bileti Fiyatı Hesaplayan Program
+Java ile mesafeye ve şartlara göre uçak bileti fiyatı hesaplayan programı yapın. Kullanıcıdan Mesafe (KM), yaşı ve yolculuk tipi (Tek Yön, Gidiş-Dönüş) bilgilerini alın. Mesafe başına ücret 0,10 TL / km olarak alın. İlk olarak uçuşun toplam fiyatını hesaplayın ve sonrasında ki koşullara göre müşteriye aşağıdaki indirimleri uygulayın ;
+
+📌 Kullanıcıdan alınan değerler geçerli (mesafe ve yaş değerleri pozitif sayı, yolculuk tipi ise 1 veya 2) olmalıdır. Aksi takdirde kullanıcıya "Hatalı Veri Girdiniz !" şeklinde bir uyarı verilmelidir.
+
+📌 Kişi 12 yaşından küçükse bilet fiyatı üzerinden %50 indirim uygulanır.
+
+📌 Kişi 12-24 yaşları arasında ise bilet fiyatı üzerinden %10 indirim uygulanır.
+
+📌 Kişi 65 yaşından büyük ise bilet fiyatı üzerinden %30 indirim uygulanır.
+
+📌 Kişi "Yolculuk Tipini" gidiş dönüş seçmiş ise bilet fiyatı üzerinden %20 indirim uygulanır.
+🔍 İpucu
+
+```
+Normal Tutar = Mesafe * 0.10 = 1500 * 0.10 = 150 TL
+Yaş İndirimi = Normal Tutar * Yaş İndirim Oranı = 150 * 0.10= 15 TL
+İndirimli Tutar = Normal Tutar – Yaş İndirimi = 150 – 15 = 135 TL
+Gidiş Dönüş Bilet İndirimi = İndirimli Tutar * 0.20 = 135 * 0.20 = 27 TL
+Toplam Tutar = (135-27)* 2 = 216 TL
+
+```
+```
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class UcakBiletiFiyati {
+    public static void main(String[] args) {
+
+        double mesafe, yas, mUcret=0.10, nTutar, yIndirimi=0, iTutar, gdbIndirimi, tTutar;
+        int yolTip;
+
+       
+        Scanner input = new Scanner(System.in);
+        DecimalFormat df = new DecimalFormat("#.##");
+
+        System.out.print("Mesafeyi km türünden giriniz : ");
+        mesafe = input.nextInt();
+
+        System.out.print("Yaşınızı giriniz : ");
+        yas = input.nextInt();
+
+        System.out.print("Yolculuk tipini giriniz (1 => Tek Yön , 2 => Gidiş Dönüş ): ");
+        yolTip = input.nextInt();
+
+        nTutar=mesafe*mUcret;
+
+        if (yas < 12) {
+            yIndirimi=nTutar*0.50;
+        } else if (yas >=12 && yas <= 24){
+            yIndirimi=nTutar*0.10;
+        } else if (yas >= 65){
+            yIndirimi=nTutar*0.30;
+        }
+
+        iTutar=nTutar-yIndirimi;
+
+        switch (yolTip) {
+            case 1:
+                gdbIndirimi=iTutar*0;
+                tTutar=iTutar-gdbIndirimi;
+                System.out.print("\nToplam Tutar = " + df.format(tTutar) +" TL");
+                break;
+
+            case 2:
+                gdbIndirimi=iTutar*0.20;
+                tTutar=iTutar-gdbIndirimi;
+                tTutar=tTutar*2;
+                System.out.print("\nToplam Tutar = " + df.format(tTutar) +" TL");
+                break;
+
+            default:
+                System.out.println("\nHatalı Veri Girdiniz !");
+                break;
+        }
+    }
+}
+
 
 ```
