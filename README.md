@@ -14,7 +14,7 @@ Bu repo [Kodluyoruz](https://www.kodluyoruz.org/) Java 101 eğitimi için hazır
 |[PRATİK 8](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-8---s%C4%B1n%C4%B1f%C4%B1-ge%C3%A7me-durumu) -  Sınıfı Geçme Durumu|
 |[PRATİK 9](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-9---hava-s%C4%B1cakl%C4%B1g%C4%B1na-g%C3%B6re-etkinlik) - Hava Sıcaklıgına Göre Etkinlik|
 |[PRATİK 10](https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-10---k%C3%BC%C3%A7%C3%BCkten-b%C3%BCy%C3%BC%C4%9Fe-s%C4%B1ralama) - Küçükten Büyüğe Sıralama|
-|PRATİK 11() - Burç Bulan Program|
+|PRATİK 11(https://github.com/havakaragozx/Java_Kodluyoruz_101/blob/main/README.md#pratik-11---bur%C3%A7-bulan-program) - Burç Bulan Program|
 -------------------------------------------
 ### Pratik 1 - Not Ortalaması
 Java ile Matematik, Fizik, Kimya, Türkçe, Tarih, Müzik derslerinin sınav puanlarını kullanıcıdan alan ve ortalamalarını hesaplayıp ekrana bastırılan programı yazın.
